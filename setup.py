@@ -12,7 +12,7 @@ setup(
     install_requires=[
         'Lektor',
         'Pygments',
-        'docutils'],
+        'docutils>=0.21'],
     extras_require={
         'dev': [
             'pyquery',
@@ -20,7 +20,7 @@ setup(
             'pytest-cov',
             'pytest-flake8']},
     py_modules=['lektor_rst'],
-    python_requires=">=3.7",
+    python_requires=">=3.9",
     entry_points={
         'lektor.plugins': [
             'rst = lektor_rst:RstPlugin']})

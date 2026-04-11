@@ -12,12 +12,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - python-version: "3.7"
-            os: "ubuntu-latest"
-            tox-envs: "py37"
-          - python-version: "3.8"
-            os: "ubuntu-latest"
-            tox-envs: "py38"
           - python-version: "3.9"
             os: "ubuntu-latest"
             tox-envs: "py39"
@@ -27,6 +21,15 @@ jobs:
           - python-version: "3.11"
             os: "ubuntu-latest"
             tox-envs: "py311"
+          - python-version: "3.12"
+            os: "ubuntu-latest"
+            tox-envs: "py312"
+          - python-version: "3.13"
+            os: "ubuntu-latest"
+            tox-envs: "py313"
+          - python-version: "3.14"
+            os: "ubuntu-latest"
+            tox-envs: "py314"
 
     env:
       PY_COLORS: 1
@@ -55,12 +58,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - python-version: "3.7"
-            os: "ubuntu-latest"
-            tox-envs: "py37"
-          - python-version: "3.8"
-            os: "ubuntu-latest"
-            tox-envs: "py38"
           - python-version: "3.9"
             os: "ubuntu-latest"
             tox-envs: "py39"
@@ -70,6 +67,15 @@ jobs:
           - python-version: "3.11"
             os: "ubuntu-latest"
             tox-envs: "py311"
+          - python-version: "3.12"
+            os: "ubuntu-latest"
+            tox-envs: "py312"
+          - python-version: "3.13"
+            os: "ubuntu-latest"
+            tox-envs: "py313"
+          - python-version: "3.14"
+            os: "ubuntu-latest"
+            tox-envs: "py314"
 
     env:
       PY_COLORS: 1
