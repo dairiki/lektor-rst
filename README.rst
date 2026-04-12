@@ -22,7 +22,7 @@ For example::
 Changelog
 =========
 
-0.4.0 - Unreleased
+0.4.0 - 2026-04-12
 ------------------
 
 - Require docutils >= 0.21.
