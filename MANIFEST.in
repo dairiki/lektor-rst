@@ -1,2 +1,2 @@
-include *.ini
+include *.ini README.rst
 recursive-include tests *

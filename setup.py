@@ -1,9 +1,12 @@
+from pathlib import Path
 from setuptools import setup
 
 
 setup(
     name='lektor-rst',
     description='Adds reStructuredText support to Lektor.',
+    long_description=(Path(__file__).parent / "README.rst").read_text(),
+    long_description_content_type="text/x-rst",
     version='0.4.0.dev0',
     author=u'Florian Schulze',
     author_email='florian.schulze@gmx.net',
