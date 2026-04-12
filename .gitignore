@@ -1,11 +1,13 @@
-__pycache__
 *.egg-info
 *.sublime-project
 /.coverage
 /.tox
-/pip-selfcheck.json
 /bin/
+/build/
 /dist/
 /htmlcov_*/
 /include/
 /lib/
+/pip-selfcheck.json
+/pyvenv.cfg
+__pycache__
