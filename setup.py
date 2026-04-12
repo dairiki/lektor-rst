@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name='lektor-rst',
     description='Adds reStructuredText support to Lektor.',
-    version='0.3.0',
+    version='0.4.0.dev0',
     author=u'Florian Schulze',
     author_email='florian.schulze@gmx.net',
     url='http://github.com/fschulze/lektor-rst',
@@ -12,7 +12,7 @@ setup(
     install_requires=[
         'Lektor',
         'Pygments',
-        'docutils'],
+        'docutils>=0.21'],
     extras_require={
         'dev': [
             'pyquery',
@@ -20,7 +20,7 @@ setup(
             'pytest-cov',
             'pytest-flake8']},
     py_modules=['lektor_rst'],
-    python_requires=">=3.7",
+    python_requires=">=3.9",
     entry_points={
         'lektor.plugins': [
             'rst = lektor_rst:RstPlugin']})

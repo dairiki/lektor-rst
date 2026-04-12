@@ -31,11 +31,11 @@ def rst_to_html(text, extra_params, record):
     except:
         writer_name = 'html'
 
-    Writer = docutils.writers.get_writer_class(writer_name)
     pub = docutils.core.Publisher(
         destination_class=docutils.io.StringOutput,
-        writer=Writer())
-    pub.set_components('standalone', 'restructuredtext', 'html')
+        reader="standalone",
+        parser="restructuredtext",
+        writer=writer_name)
     pub.process_programmatic_settings(None, extra_params, None)
     pub.set_source(
         source=StringIO(text),
@@ -71,7 +71,7 @@ class Rst(object):
         self.__cached_for_ctx = None
         self.__html = None
         self.__meta = None
-        
+
     def __bool__(self):
         return bool(self.source)
 
