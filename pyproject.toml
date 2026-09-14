@@ -41,3 +41,18 @@ testpaths = [ "tests" ]
 [tool.coverage.html]
 # Allows controlling html report directory via envvar, e.g. in tox.ini
 directory = "${COVERAGE_HTML_DIR-htmlcov}"
+
+[tool.ruff.lint]
+extend-select = [
+    "F", "E", "W",              # all default flake8 rules
+    "B",                        # flake8-bugbear
+]
+ignore = [
+    "E722",                     # bare except
+    "I001",                     # import block un-sorted or un-formatted
+    "PTH124",                   # py.path
+    "UP004",                    # Class inherits from `object`
+    "UP009",                    # encoding declaration is unnecessary
+    "UP024",                    # replace aliased eerrors with `OSError`
+    "UP025",                    # unicode literals
+]

@@ -54,7 +54,9 @@ def rst_to_html(text, extra_params, record):
                 value = element.astext()
             name = name.lower()
             if name == 'date':
-                value = datetime.datetime.strptime(value, "%Y-%m-%d %H:%M")
+                # FIXME: do we want naive or aware datetime here?
+                value = datetime.datetime.strptime(value, "%Y-%m-%d %H:%M") # noqa: DTZ007
+
             metadata[name] = value
 
     parts = pub.writer.parts
