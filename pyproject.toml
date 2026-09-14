@@ -25,7 +25,6 @@ dev = [
     "pyquery",
     "pytest",
     "pytest-cov",
-    "pytest-flake8",
 ]
 
 [build-system]
@@ -35,3 +34,10 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools]
 py-modules = [ "lektor_rst" ]
 
+[tool.pytest]
+addopts = [ "--cov=lektor_rst", "--cov-report=term", "--cov-report=html", "-ra" ]
+testpaths = [ "tests" ]
+
+[tool.coverage.html]
+# Allows controlling html report directory via envvar, e.g. in tox.ini
+directory = "${COVERAGE_HTML_DIR-htmlcov}"
