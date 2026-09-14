@@ -27,7 +27,7 @@ def rst_to_html(text, extra_params, record):
         settings = config.section_as_dict('docutils')
         writer_name = settings.pop('writer', 'html')
         extra_params.update(settings)
-    except:
+    except LookupError:
         writer_name = 'html'
 
     pub = docutils.core.Publisher(

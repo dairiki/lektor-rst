@@ -48,7 +48,6 @@ extend-select = [
     "B",                        # flake8-bugbear
 ]
 ignore = [
-    "E722",                     # bare except
     "I001",                     # import block un-sorted or un-formatted
     "PTH124",                   # py.path
 ]
