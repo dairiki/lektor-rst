@@ -47,6 +47,3 @@ extend-select = [
     "F", "E", "W",              # all default flake8 rules
     "B",                        # flake8-bugbear
 ]
-ignore = [
-    "I001",                     # import block un-sorted or un-formatted
-]

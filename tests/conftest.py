@@ -10,10 +10,7 @@ from lektor.project import Project
 
 @pytest.fixture
 def project_path(tmp_path):
-    shutil.copytree(
-        Path(__file__).parent / "demo-project",
-        tmp_path / "project"
-    )
+    shutil.copytree(Path(__file__).parent / "demo-project", tmp_path / "project")
     return tmp_path / "project"
 
 
