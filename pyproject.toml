@@ -49,5 +49,4 @@ extend-select = [
 ]
 ignore = [
     "I001",                     # import block un-sorted or un-formatted
-    "PTH124",                   # py.path
 ]
