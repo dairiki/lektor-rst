@@ -41,7 +41,7 @@ def make_builder(request, pad):
     def cleanup():
         try:
             shutil.rmtree(out)
-        except (OSError, IOError):
+        except OSError:
             pass
 
     request.addfinalizer(cleanup)

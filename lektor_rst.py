@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from io import StringIO
 from lektor.context import get_ctx
 from lektor.pluginsystem import Plugin, get_plugin
@@ -65,7 +64,7 @@ def rst_to_html(text, extra_params, record):
     return body, metadata
 
 
-class Rst(object):
+class Rst:
     def __init__(self, source, extra_params, record):
         self.source = source
         self.extra_params = extra_params
@@ -114,7 +113,7 @@ class Rst(object):
         return Markup(self.__html)
 
 
-class RstDescriptor(object):
+class RstDescriptor:
     def __init__(self, source, extra_params):
         self.source = source
         self.extra_params = extra_params
@@ -137,7 +136,7 @@ class RstType(Type):
         self.extra_params.update(options)
 
     def value_from_raw(self, raw):
-        return RstDescriptor(raw.value or u'', self.extra_params)
+        return RstDescriptor(raw.value or '', self.extra_params)
 
 
 class RstPlugin(Plugin):

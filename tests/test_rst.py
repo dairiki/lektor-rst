@@ -1,4 +1,3 @@
-# coding: utf-8
 import py
 import pyquery
 import textwrap
@@ -21,8 +20,8 @@ def test_rst(builder, capsys):
         assert 'literal-block' in pre_class
         link = html('a')
         assert link.attr['href'] == 'http://example.com'
-    assert index_html('a').text() == u'Foo bar'
-    assert de_index_html('a').text() == u'Föö bär'
+    assert index_html('a').text() == 'Foo bar'
+    assert de_index_html('a').text() == 'Föö bär'
 
 
 def test_config(builder, capsys, project_path):

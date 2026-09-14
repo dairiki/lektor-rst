@@ -51,8 +51,4 @@ ignore = [
     "E722",                     # bare except
     "I001",                     # import block un-sorted or un-formatted
     "PTH124",                   # py.path
-    "UP004",                    # Class inherits from `object`
-    "UP009",                    # encoding declaration is unnecessary
-    "UP024",                    # replace aliased eerrors with `OSError`
-    "UP025",                    # unicode literals
 ]
